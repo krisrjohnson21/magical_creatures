@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Magical Creatures</title>
+  </head>
+  <body>
+    <h1><%= @magical_creature %></h1>
+    <ul>
+        <% @magical_creatures.each do |creature| %>
+          <% if creature[:name] == @magical_creature %>
+           <li>
+             <b>Name: </b><%= creature[:name] %>
+           </li>
+           <li>
+             <b>Age: </b><%= creature[:age] %>
+           </li>
+           <li>
+             <b>Ability: </b><%= creature[:ability] %>
+           </li>
+           <% end %>
+        <% end %>
+    </ul>
+  </body>
+</html>
